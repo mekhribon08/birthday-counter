@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday time</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="wrapper__text">Birthday Counter</h1>
+      <form class="form">
+        <input
+          data-input-date
+          class="form-input"
+          placeholder="Birth Date"
+          type="number"
+        />
+        <input
+          data-input-month
+          class="form-input"
+          placeholder="Birth Month"
+          type="number"
+        />
+        <button data-btn class="btn">;)</button>
+      </form>
+      <img
+        class="wrap__balloon"
+        src="./picture/balloon.jpg"
+        width="300px"
+        alt="balloon"
+      />
+      <img
+        class="wrap__birthday"
+        src="./picture/happy birthday.jpg"
+        width="300px"
+        alt="birthday"
+      />
+      <ul class="list">
+        <li data-day class="list__text">
+          <span>Day</span>
+        </li>
+        <li data-hour class="list__text">
+          <span>Hour</span>
+        </li>
+        <li data-minut class="list__text">
+          <span>Minut</span>
+        </li>
+        <li data-secund class="list__text">
+          <span>Secund</span>
+        </li>
+      </ul>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
