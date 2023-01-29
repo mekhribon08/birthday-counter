@@ -27,15 +27,8 @@
           data-input-date
           class="form-input"
           placeholder="Birth Date"
-          type="number"
+          type="datetime-local"
         />
-        <input
-          data-input-month
-          class="form-input"
-          placeholder="Birth Month"
-          type="number"
-        />
-        <button data-btn class="btn">;)</button>
       </form>
       <img
         class="wrap__balloon"
@@ -49,21 +42,11 @@
         width="300px"
         alt="birthday"
       />
-      <ul class="list">
-        <li data-day class="list__text">
-          <span>Day</span>
-        </li>
-        <li data-hour class="list__text">
-          <span>Hour</span>
-        </li>
-        <li data-minut class="list__text">
-          <span>Minut</span>
-        </li>
-        <li data-secund class="list__text">
-          <span>Secund</span>
-        </li>
-      </ul>
+      <div class="counter">
+        <h5 data-date class="counter__text"></h5>
+      </div>
     </div>
+
     <script src="./js/main.js"></script>
     <script src="./js/clock.js"></script>
   </body>

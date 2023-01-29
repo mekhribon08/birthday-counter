@@ -30,27 +30,12 @@ body {
   text-align: center;
   margin-top: 80px;
   color: orange;
-  font-size: 45px;
+  font-size: 50px;
   text-shadow: 4px 8px 10px;
 }
 
 .wrap__birthday {
   margin-left: 680px;
-}
-
-.btn {
-  cursor: pointer;
-  width: 60px;
-  box-shadow: 4px 8px 15px lightsalmon;
-  height: 35px;
-  border-radius: 8px;
-  border: 2px solid orange;
-  background: lightyellow;
-}
-
-.btn:focus {
-  transform: scale(20);
-  transition: 0.3s ease;
 }
 
 .wrap__balloon {
@@ -68,15 +53,15 @@ body {
   }
 }
 
-.list {
+.counter {
   display: flex;
   justify-content: center;
   gap: 20px;
   list-style: none;
-  margin-top: -150px;
+  margin-top: -210px;
 }
 
-.list__text {
+.counter__text {
   font-size: 30px;
   color: lightgray;
 }

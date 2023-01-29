@@ -1,26 +1,21 @@
-const elDay = document.querySelector("[data-day]");
-const elHour = document.querySelector("[data-hour]");
-const elMinut = document.querySelector("[data-minut]");
-const elSecund = document.querySelector("[data-secund]");
-const elBtn = document.querySelector("[data-btn]");
+const elDate = document.querySelector("[data-date]");
 const elInputDate = document.querySelector("[data-input-date]");
-const elInputMonth = document.querySelector("[data-input-month]");
-const newDate = new Date();
 
-elBtn.addEventListener("click", (evt) => {
-  countTimer(evt);
+elInputDate.addEventListener("change", () => {
+  setInterval(() => {
+    startTimer(new Date(elInputDate.value));
+  }, 1000);
 });
 
-function countTimer() {
-  const num = new Date(`${elInputMonth}-${elInputDate} 00:00:00`) - newDate;
-  const days = Math.round(num / (1000 * 60 * 60 * 24));
-  const hours = Math.round(num / (1000 * 60 * 60)) % 24;
-  const minutes = Math.round(num / (1000 * 60)) % 60;
-  const seconds = Math.round(num / 1000) % 60;
-  elDay.textContent = days;
-  elHour.textContent = hours;
-  elMinut.textContent = minutes;
-  elSecund.textContent = seconds;
-}
+function startTimer(date) {
+  const now = new Date();
+  let diff = Math.trunc((date.getTime() - now.getTime()) / 1000);
+  const second = diff % 60;
+  diff = Math.trunc(diff / 60);
+  const minute = diff % 60;
+  diff = Math.trunc(diff / 60);
+  const hour = diff % 24;
+  diff = Math.trunc(diff / 24);
 
-setInterval(countTimer, 1000);
+  elDate.textContent = `${diff} day, ${hour} hour, ${minute} minute, ${second} second.`;
+}
