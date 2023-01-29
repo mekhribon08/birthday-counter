@@ -53,6 +53,12 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .wrap__balloon {
+    display: none;
+  }
+}
+
 .counter {
   display: flex;
   justify-content: center;
